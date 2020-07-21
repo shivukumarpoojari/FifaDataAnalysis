@@ -16,14 +16,14 @@ object DataAnalysis {
     logger.info("loading fifa dataset on the year of 2019")
     val dataDF=spark
       .read
-      .option("header","true")                               //to get the column names//
-      .option("inferSchema","true")                           //insert the schema//
+      .option("header","true")                               
+      .option("inferSchema","true")                        
       .csv("C:/Users/user/IdeaProjects/FifaDataAnalysis/sourcedata/fifa2019.csv")
     val firstDf=dataDF.select("_c0","ID","Name","Age","Nationality","Overall","Club","Value","Wage")
-    firstDf.drop(col("_c0")).show()                                   // droping the column//
-    println(dataDF.columns.toList)                                             //to make the list of column//
-//    dataDF.select("_c0","_c1","_c2","_c3","_c4","_c5","_c6").show()
-//    dataDF.select(col("ID"),col("Name"), col("Age")).show()
+    firstDf.drop(col("_c0")).show()                                  
+    println(dataDF.columns.toList)                                            
+    dataDF.select("_c0","_c1","_c2","_c3","_c4","_c5","_c6").show()
+    dataDF.select(col("ID"),col("Name"), col("Age")).show()
     logger.info("fifa data has loaded")
 
   }
