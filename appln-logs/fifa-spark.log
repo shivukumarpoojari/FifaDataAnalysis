@@ -1,0 +1,4 @@
+20/07/21 20:46:35 INFO DataAnalysis$: creating spark session
+20/07/21 20:46:47 INFO DataAnalysis$: spark session has been created
+20/07/21 20:46:47 INFO DataAnalysis$: loading fifa dataset on the year of 2019
+20/07/21 20:47:01 INFO DataAnalysis$: fifa data has loaded
